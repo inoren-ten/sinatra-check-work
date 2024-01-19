@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf8">
+    <title><%= @title %></title>
+    <link href="/css/reset.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="top">
+          <img src="/img/logo.svg" alt="テックチャットのアイコン" class="icon tobisuke">
+          <a href="/">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><g><path d="M12 9c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm0 6c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2zm0-13.304L.622 8.807l1.06 1.696L3 9.679V19.5C3 20.881 4.119 22 5.5 22h13c1.381 0 2.5-1.119 2.5-2.5V9.679l1.318.824 1.06-1.696L12 1.696zM19 19.5c0 .276-.224.5-.5.5h-13c-.276 0-.5-.224-.5-.5V8.429l7-4.375 7 4.375V19.5z"></path></g></svg>
+            <span>ホーム</span>
+          </a>
+          <a href="/post/new" class="button">投稿する</a>
+        </div>
+      </nav>
+      <main>
+        <%= yield %>
+      </main>
+    </div>
+  </body>
+</html>

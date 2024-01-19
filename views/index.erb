@@ -1,0 +1,27 @@
+<div class="header">
+  <h1 class="contents">ホーム</h1>
+</div>
+<% @posts.each do |post| %>
+<div class="post">
+  <div class="contents">
+    <img src="https://placehold.jp/ECD53E/ffffff/150x150.png" alt="ユーザーアイコン" class="user-icon">
+    <div class="text">
+      <div class="title">
+        <span class="user-name"><%= post.name %></span>
+        <span class="create-time"><%= post.created_at %></span>
+      </div>
+      <p><%= post.body %></p>
+      <div class="actions">
+        <form>
+          <input type="submit" value="いいね(100)">
+        </form>
+        <a href="/post/edit/<%= post.id %>">編集</a>
+        <form method="post" action="/post/delete/<%= post.id %>">
+          <input type="submit" value="削除">
+        </form>
+        <a href="/post/comments/1">返信</a>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

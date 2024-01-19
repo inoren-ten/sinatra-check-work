@@ -1,0 +1,14 @@
+<div class="header">
+  <h1 class="contents">投稿を編集する</h1>
+</div>
+<form class="contents" method="post" action="/post/update/<%= @post.id %>">
+  <div>
+    <label for="">投稿者名</label>
+    <input type="text" name="name" value="<%= @post.name %>">
+  </div>
+  <div>
+    <label for="">本文</label>
+    <textarea name="body"><%= @post.body %></textarea>
+  </div>
+  <input type="submit" value="保存する">
+</form>
